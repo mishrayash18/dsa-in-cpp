@@ -1,0 +1,15 @@
+# Compiled C++ executables
+*.exe
+*.out
+*.obj
+*.o
+
+# Build folders
+build/
+debug/
+
+# VS Code settings
+.vscode/
+
+# Ignore temporary file explorer state
+*.log
