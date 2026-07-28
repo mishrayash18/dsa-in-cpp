@@ -136,26 +136,26 @@
 
 
 // print all subsets
-#include <iostream>
-#include <vector>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// using namespace std;
 
-void printSubsets(vector<int> nums, vector<int> res, int i) {
-    if (i >= nums.size()) {
-        for (int val : res) {
-            cout << val << " ";
-        }
-        cout << endl;
-        return;
-    }
-    res.push_back(nums[i]);
-    printSubsets(nums, res, i+1);
+// void printSubsets(vector<int> nums, vector<int> res, int i) {
+//     if (i >= nums.size()) {
+//         for (int val : res) {
+//             cout << val << " ";
+//         }
+//         cout << endl;
+//         return;
+//     }
+//     res.push_back(nums[i]);
+//     printSubsets(nums, res, i+1);
 
-    res.pop_back();
-    printSubsets(nums, res, i+1);
-}
+//     res.pop_back();
+//     printSubsets(nums, res, i+1);
+// }
 
-int main() {
-    vector <int> res;
-    printSubsets({1,2,3,4}, res, 0);
-}
+// int main() {
+//     vector <int> res;
+//     printSubsets({1,2,3,4}, res, 0);
+// }
