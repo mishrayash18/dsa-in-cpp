@@ -11,23 +11,44 @@ struct node {
     }
 };
 
-// BRUTE FORCE
+// // BRUTE FORCE [O(m*n)]
+// node* getIntersectionNode(node* headA, node* headB) {
+//     node* tempA = headA;
+//     node* tempB = headB;
+//     while (tempA!=nullptr) {
+//         while (tempB!=nullptr){
+//             if (tempA == tempB ) {
+//                 return tempA;
+//             }
+//             tempB=tempB->next;
+//         }
+//         tempA=tempA->next;
+//         tempB=headB;
+//     }
+//     return nullptr;
+// }
+
+
+// OPTIMISED [O(m+n)]
 node* getIntersectionNode(node* headA, node* headB) {
     node* tempA = headA;
     node* tempB = headB;
-    while (tempA!=nullptr) {
-        while (tempB!=nullptr){
-            if (tempA == tempB ) {
-                return tempA;
-            }
-            tempB=tempB->next;
+    while (tempA!=tempB) {
+        if (tempA == nullptr) {
+            tempA = headB;
         }
-        tempA=tempA->next;
-        tempB=headB;
+        else {
+            tempA = tempA -> next;
+        }
+        if (tempB == nullptr) {
+            tempB = headA;
+        }
+        else {
+            tempB = tempB -> next;
+        }
     }
-    return nullptr;
+    return tempA;
 }
-
 int main() {
     node* headA = new node(10);
     headA -> next = new node(20);
