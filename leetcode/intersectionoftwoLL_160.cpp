@@ -11,6 +11,7 @@ struct node {
     }
 };
 
+// BRUTE FORCE
 node* getIntersectionNode(node* headA, node* headB) {
     node* tempA = headA;
     node* tempB = headB;
