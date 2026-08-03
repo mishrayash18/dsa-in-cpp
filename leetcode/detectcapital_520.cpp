@@ -19,6 +19,4 @@ int main() {
     cout << detectCapitalUse("HELLO") << endl;
     cout << detectCapitalUse("hello") << endl;
     cout << detectCapitalUse("HEllo") << endl;
-
-
 }
