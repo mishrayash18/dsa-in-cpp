@@ -11,7 +11,7 @@ int jump(vector<int> nums) {
 
         if (i == currentEnd) {
             jumps++;
-            currentEnd = farthest;
+            currentEnd = farthest;           
         }
     }
     return jumps;
