@@ -17,12 +17,12 @@ node* searchBST(node* root, int val) {
 
     else if (val == root->data) return root;
     
-    else if (val >= root->data) {
-        node* leftnode = searchBST(root->right, val);
+    else if (val > root->data) {
+        return searchBST(root->right, val);
     }
     
-    else if (val <= root->data) {
-        node* rightnode = searchBST(root->left, val);
+    else if (val < root->data) {
+        return searchBST(root->left, val);
     }
 
 }
@@ -36,11 +36,7 @@ int main() {
     root->left->left = new node(3);
     root->left->right = new node(7);
 
-    root->left->right->right = new node(8);
-
-    node* 
-
-    
+    root->left->right->right = new node(8); 
 
     return 0;
 
