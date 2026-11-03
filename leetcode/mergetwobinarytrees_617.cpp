@@ -12,9 +12,6 @@ struct node {
     }
 };
 
-int helper(node* root1, node* root2) {
-
-}
 
 node* mergetrees(node* root1, node* root2) {
     if (root1==nullptr && root2==nullptr) return nullptr;
